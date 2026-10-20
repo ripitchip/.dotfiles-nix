@@ -48,7 +48,7 @@ in
               name = "ssh/${name}${suffix}";
               value = {
                 owner = user;
-                mode = if suffix == "" then "0600" else "0644";
+                mode = "0600";
                 # Symlink in the persisted ~/.ssh, pointing to /run/secrets
                 path = "${home}/.ssh/${name}${suffix}";
               };

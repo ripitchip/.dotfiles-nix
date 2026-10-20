@@ -36,6 +36,17 @@ in
       };
     };
 
+    # Key from secrets/secrets.yaml, see my.secrets.sshKeys
+    programs.ssh = {
+      enable = true;
+      enableDefaultConfig = false;
+      settings."github.com" = {
+        User = "git";
+        IdentityFile = "~/.ssh/id_rsa";
+        IdentitiesOnly = true;
+      };
+    };
+
     # Not programs.lazygit: it generates config.yml from `settings` and would
     # conflict with this file
     home.packages = [ pkgs.lazygit ];
