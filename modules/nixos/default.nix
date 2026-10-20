@@ -1,0 +1,17 @@
+# Every module here declares options under `my.*`. Core modules are always
+# active and only expose settings; feature modules are off until a host sets
+# `my.<feature>.enable = true`.
+{
+  imports = [
+    ./core
+    ./asus.nix
+    ./audio.nix
+    ./bluetooth.nix
+    ./desktop.nix
+    ./impermanence.nix
+    ./laptop.nix
+    ./nvidia.nix
+    ./secrets.nix
+    ./steam.nix
+  ];
+}

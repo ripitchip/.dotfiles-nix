@@ -1,0 +1,51 @@
+gui:
+  showIcons: true
+
+os:
+  editPreset: "nvim"
+
+customCommands:
+  # Conventional Commits: type(scope)!: message
+  - key: "<c-f>"
+    context: "files"
+    description: "Conventional commit"
+    prompts:
+      - type: "menu"
+        title: "Commit type"
+        key: "Type"
+        options:
+          - value: "feat"
+            description: "A new feature"
+          - value: "fix"
+            description: "A bug fix"
+          - value: "docs"
+            description: "Documentation only changes"
+          - value: "style"
+            description: "Formatting, whitespace (no code change)"
+          - value: "refactor"
+            description: "Code change that neither fixes a bug nor adds a feature"
+          - value: "perf"
+            description: "Performance improvement"
+          - value: "test"
+            description: "Add or fix tests"
+          - value: "chore"
+            description: "Maintenance, config, dependency updates"
+      - type: "input"
+        title: "Scope (optional, e.g. niri, neovim)"
+        key: "Scope"
+        initialValue: ""
+      - type: "menu"
+        title: "Breaking change?"
+        key: "Breaking"
+        options:
+          - value: "no"
+          - value: "yes"
+      - type: "input"
+        title: "Message"
+        key: "Message"
+        initialValue: ""
+      - type: "confirm"
+        title: "Commit"
+        body: "{{.Form.Type}}{{if .Form.Scope}}({{.Form.Scope}}){{end}}{{if eq .Form.Breaking \"yes\"}}!{{end}}: {{.Form.Message}}"
+    command: "git commit -m {{quote .Form.Type}}{{if .Form.Scope}}{{quote (printf \"(%s)\" .Form.Scope)}}{{end}}{{if eq .Form.Breaking \"yes\"}}'!'{{end}}': '{{quote .Form.Message}}"
+    loadingText: "Committing..."

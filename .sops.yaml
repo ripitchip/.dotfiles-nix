@@ -1,0 +1,9 @@
+# Which age keys can decrypt which files. After changing the keys:
+#   sops updatekeys secrets/secrets.yaml
+keys:
+  - &thomas age18d6jx8nrtpu03eg84n6e9xa0lvvzte3s0g872sd9pa2927yqrg4qvevr7v # /nix/persist/home/thomas/.config/sops/age/keys.txt
+creation_rules:
+  - path_regex: secrets/[^/]+\.yaml$
+    key_groups:
+      - age:
+          - *thomas

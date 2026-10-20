@@ -1,0 +1,26 @@
+# home-manager modules, all off by default; enabled per user in home/<user>.nix.
+# Each feature module owns everything it needs: packages, config, persisted state.
+{
+  imports = [
+    ./aerc.nix
+    ./bitwarden.nix
+    ./claude-desktop.nix
+    ./desktop
+    ./firefox.nix
+    ./flameshot.nix
+    ./git
+    ./helium.nix
+    ./impermanence.nix
+    ./kubernetes.nix
+    ./neovim.nix
+    ./nocturne.nix
+    ./protonmail.nix
+    ./shell.nix
+    ./signal.nix
+    ./sonora.nix
+    ./termsonic.nix
+    ./vscode.nix
+    ./zen-browser.nix
+    ./zellij.nix
+  ];
+}
