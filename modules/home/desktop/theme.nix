@@ -26,6 +26,11 @@
       enable = true;
       gtk3.extraConfig.gtk-application-prefer-dark-theme = true;
       gtk4.theme = null;
+      # Unlike gtk.theme, only writes dconf's icon-theme, which Electron ignores
+      iconTheme = {
+        package = pkgs.papirus-icon-theme;
+        name = "Papirus-Dark";
+      };
     };
   };
 }
