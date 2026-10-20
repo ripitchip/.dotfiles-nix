@@ -106,6 +106,16 @@ output "eDP-1" {
     position x=0 y=0
 }
 
+// Desktop monitors, matched by make/model/serial since the DP-* connector
+// names can change; absent on the laptop so these blocks are ignored there
+output "iiyama Corporation PL2492Q 1231752202026" {
+    position x=0 y=0
+}
+
+output "iiyama Corporation PL2492Q 1231752202009" {
+    position x=2560 y=0
+}
+
 // Same theme and size as home.pointerCursor in theme.nix; niri also passes
 // them to the apps it spawns (XCURSOR_THEME, XCURSOR_SIZE)
 cursor {
