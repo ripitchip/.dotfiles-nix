@@ -1,6 +1,7 @@
 { config, lib, ... }:
 {
   imports = [
+    ./bluetooth.nix
     ./clipboard.nix
     ./fuzzel.nix
     ./theme.nix

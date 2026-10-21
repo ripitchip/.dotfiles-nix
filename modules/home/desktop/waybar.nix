@@ -65,6 +65,7 @@
           format-connected = "BT {device_alias}";
           tooltip-format-connected = "{device_enumerate}";
           tooltip-format-enumerate-connected = "{device_alias}";
+          on-click = "overskride";
         };
 
         power-profiles-daemon = {

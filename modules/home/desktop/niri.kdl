@@ -391,6 +391,7 @@ binds {
     Mod+D hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
     Mod+Shift+D hotkey-overlay-title="Run a Command in kitty" { spawn "command-run"; }
     Mod+C hotkey-overlay-title="Search the Clipboard History" { spawn "clipboard-pick"; }
+    Mod+Shift+B hotkey-overlay-title="Bluetooth Devices: overskride" { spawn "overskride"; }
     Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
 
     // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.
