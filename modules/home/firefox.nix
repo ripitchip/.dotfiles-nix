@@ -12,7 +12,7 @@ let
   };
 in
 {
-  options.my.firefox.enable = lib.mkEnableOption "Firefox with the Bitwarden and Proton VPN extensions";
+  options.my.firefox.enable = lib.mkEnableOption "Firefox with the Bitwarden, Proton VPN and uBlock Origin extensions";
 
   config = lib.mkIf config.my.firefox.enable {
     # Only policies are declared: the profile itself (settings, bookmarks, ...)
@@ -24,6 +24,7 @@ in
         ExtensionSettings = {
           "{446900e4-71c2-419f-a6a7-df9c091e268b}" = extension "bitwarden-password-manager";
           "vpn@proton.ch" = extension "proton-vpn-firefox-extension";
+          "uBlock0@raymondhill.net" = extension "ublock-origin";
         };
 
         # Reopen the tabs of the previous session on startup
