@@ -27,6 +27,7 @@ in
     # directly, no password-store flag needed like the Electron apps.
     home.persistence.${osConfig.my.impermanence.persistPath}.directories = [
       ".config/OpenCloud" # account, sync folder pairs, settings
+      "OpenCloud" # the synced files themselves
     ];
   };
 }

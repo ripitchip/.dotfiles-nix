@@ -21,5 +21,11 @@
 
     # Bound to Super+Alt+L in niri.kdl
     programs.swaylock.enable = true;
+
+    # VS Code's .desktop also claims inode/directory (to open folders as a
+    # workspace), and wins the xdg-mime fallback when nothing else is set:
+    # "open folder" from a file manager / app would launch VS Code instead
+    # of Thunar (programs.thunar, modules/nixos/desktop.nix).
+    xdg.mimeApps.defaultApplications."inode/directory" = "thunar.desktop";
   };
 }
