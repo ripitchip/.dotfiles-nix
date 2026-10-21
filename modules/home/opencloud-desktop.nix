@@ -29,5 +29,21 @@ in
       ".config/OpenCloud" # account, sync folder pairs, settings
       "OpenCloud" # the synced files themselves
     ];
+
+    # Autostart the sync client with the session instead of relying on a
+    # manual launch (same approach as waybar: wanted by graphical-session.target).
+    # No args: opencloud starts minimised to the tray and syncs in the background.
+    systemd.user.services.opencloud = {
+      Unit = {
+        Description = "OpenCloud Desktop sync client";
+        PartOf = [ "graphical-session.target" ];
+        After = [ "graphical-session.target" ];
+      };
+      Service = {
+        ExecStart = "${opencloud-desktop}/bin/opencloud";
+        Restart = "on-failure";
+      };
+      Install.WantedBy = [ "graphical-session.target" ];
+    };
   };
 }
