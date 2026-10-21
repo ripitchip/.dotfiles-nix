@@ -14,6 +14,7 @@
     ./kubernetes.nix
     ./neovim.nix
     ./nocturne.nix
+    ./opencloud-desktop.nix
     ./protonmail.nix
     ./shell.nix
     ./signal.nix
