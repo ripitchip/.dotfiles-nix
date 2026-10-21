@@ -10,6 +10,7 @@
     ./desktop.nix
     ./impermanence.nix
     ./laptop.nix
+    ./lutris.nix
     ./nvidia.nix
     ./secrets.nix
     ./steam.nix

@@ -12,6 +12,7 @@
     bluetooth.enable = true;
     desktop.enable = true;
     impermanence.enable = true;
+    lutris.enable = true;
     nvidia.enable = true;
     steam.enable = true;
   };
