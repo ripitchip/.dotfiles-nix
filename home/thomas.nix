@@ -63,8 +63,11 @@
   home.packages = with pkgs; [
     claude-code
     fastfetch
+    p7zip # 7z
     ripgrep
     tree
+    unrar
+    unzip
   ];
 
   programs.home-manager.enable = true;

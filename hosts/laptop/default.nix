@@ -14,7 +14,6 @@
     desktop.enable = true;
     impermanence.enable = true;
     laptop.enable = true;
-    lutris.enable = true;
     steam.enable = true;
   };
 
