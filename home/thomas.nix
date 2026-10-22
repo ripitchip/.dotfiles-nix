@@ -33,6 +33,7 @@
     vscode.enable = config.my.desktop.enable;
     zen-browser.enable = config.my.desktop.enable;
     helium.enable = config.my.desktop.enable;
+    jellyfin.enable = config.my.desktop.enable;
   };
 
   # Password in the oo7 keyring, unlocked at login:

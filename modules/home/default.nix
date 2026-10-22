@@ -11,6 +11,7 @@
     ./git
     ./helium.nix
     ./impermanence.nix
+    ./jellyfin.nix
     ./kubernetes.nix
     ./neovim.nix
     ./nocturne.nix
