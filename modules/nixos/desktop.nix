@@ -47,6 +47,10 @@
     services.udisks2.enable = true;
     services.gvfs.enable = true;
 
+    # Flatpak runtime + portals; apps themselves are declared per-user through
+    # nix-flatpak (see modules/home/sable.nix)
+    services.flatpak.enable = true;
+
     environment.persistence.${config.my.impermanence.persistPath}.users.${config.my.user.name}.directories = [
       ".config/xfce4" # xfconf: Thunar preferences
       ".config/Thunar" # shortcuts, custom actions

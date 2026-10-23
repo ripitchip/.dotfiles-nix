@@ -19,6 +19,7 @@
     ./nocturne.nix
     ./opencloud-desktop.nix
     ./protonmail.nix
+    ./sable.nix
     ./shell.nix
     ./signal.nix
     ./sonora.nix
