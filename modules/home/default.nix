@@ -3,11 +3,13 @@
 {
   imports = [
     ./aerc.nix
+    ./android-studio.nix
     ./bitwarden.nix
     ./claude-desktop.nix
     ./desktop
     ./firefox.nix
     ./flameshot.nix
+    ./flutter.nix
     ./git
     ./helium.nix
     ./impermanence.nix

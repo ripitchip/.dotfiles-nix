@@ -102,6 +102,21 @@
         "type": "github"
       }
     },
+    "nix-flatpak": {
+      "locked": {
+        "lastModified": 1791644268,
+        "narHash": "sha256-f7Z4PmfnRxf7+37NN48ep+KsQauGtL5REE99pJtMNp8=",
+        "owner": "gmodena",
+        "repo": "nix-flatpak",
+        "rev": "02656785ab214fa1c9655f1beaaf0269eeeec2ca",
+        "type": "github"
+      },
+      "original": {
+        "owner": "gmodena",
+        "repo": "nix-flatpak",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1791956154,
@@ -139,6 +154,7 @@
         "helium": "helium",
         "home-manager": "home-manager",
         "impermanence": "impermanence",
+        "nix-flatpak": "nix-flatpak",
         "nixpkgs": "nixpkgs",
         "sonora": "sonora",
         "sops-nix": "sops-nix",

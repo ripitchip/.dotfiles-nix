@@ -4,6 +4,7 @@
 {
   imports = [
     ./core
+    ./android.nix
     ./asus.nix
     ./audio.nix
     ./bluetooth.nix

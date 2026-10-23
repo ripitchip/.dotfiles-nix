@@ -8,6 +8,7 @@
   networking.hostName = "desktop";
 
   my = {
+    android.enable = true;
     audio.enable = true;
     bluetooth.enable = true;
     desktop.enable = true;

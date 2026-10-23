@@ -8,6 +8,7 @@
   networking.hostName = "laptop";
 
   my = {
+    android.enable = true;
     asus.enable = true;
     audio.enable = true;
     bluetooth.enable = true;
