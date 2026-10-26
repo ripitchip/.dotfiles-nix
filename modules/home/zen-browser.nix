@@ -16,6 +16,14 @@
     programs.zen-browser = {
       enable = true;
       setAsDefaultBrowser = true;
+
+      policies.Preferences = {
+        # 0 = dark, 1 = light, 2 = automatic (follow system)
+        "zen.view.window.scheme" = {
+          Value = 0;
+          Status = "default";
+        };
+      };
     };
 
     home.persistence.${osConfig.my.impermanence.persistPath}.directories = [
