@@ -18,6 +18,7 @@
     ./neovim.nix
     ./nocturne.nix
     ./opencloud-desktop.nix
+    ./proton-vpn.nix
     ./protonmail.nix
     ./screenshot.nix
     ./sdrpp.nix
