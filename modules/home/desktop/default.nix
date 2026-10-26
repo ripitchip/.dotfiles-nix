@@ -6,6 +6,7 @@
     ./fuzzel.nix
     ./theme.nix
     ./waybar.nix
+    ./wallpaper.nix
   ];
 
   options.my.desktop.enable = lib.mkEnableOption "the niri user session: config, terminal, launcher, clipboard history, waybar, swaylock, dark theme";
