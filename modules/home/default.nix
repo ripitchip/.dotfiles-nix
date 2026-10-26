@@ -3,6 +3,7 @@
 {
   imports = [
     ./aerc.nix
+    ./android-messages.nix
     ./android-studio.nix
     ./bitwarden.nix
     ./claude-desktop.nix
