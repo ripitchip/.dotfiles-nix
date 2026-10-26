@@ -43,9 +43,6 @@
       url = "github:oxcl/nix-flake-helium-browser";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    # Declarative Flatpak installs (modules/home/sable.nix)
-    nix-flatpak.url = "github:gmodena/nix-flatpak";
   };
 
   outputs =

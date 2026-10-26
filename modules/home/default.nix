@@ -7,6 +7,7 @@
     ./bitwarden.nix
     ./claude-desktop.nix
     ./desktop
+    ./element.nix
     ./firefox.nix
     ./flutter.nix
     ./git
@@ -18,7 +19,6 @@
     ./nocturne.nix
     ./opencloud-desktop.nix
     ./protonmail.nix
-    ./sable.nix
     ./screenshot.nix
     ./sdrpp.nix
     ./shell.nix
