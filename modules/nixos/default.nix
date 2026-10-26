@@ -12,6 +12,7 @@
     ./impermanence.nix
     ./laptop.nix
     ./nvidia.nix
+    ./sdr.nix
     ./secrets.nix
     ./steam.nix
   ];

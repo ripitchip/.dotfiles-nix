@@ -20,6 +20,7 @@
     ./opencloud-desktop.nix
     ./protonmail.nix
     ./sable.nix
+    ./sdrpp.nix
     ./shell.nix
     ./signal.nix
     ./sonora.nix

@@ -344,10 +344,11 @@ window-rule {
     open-floating true
 }
 
-// Flameshot's capture overlay must cover the whole output, not open as a column
+// swappy marks itself as a dialog, which niri floats by default; tile it
+// like a normal window instead.
 window-rule {
-    match app-id="^flameshot$"
-    open-fullscreen true
+    match app-id="^swappy$"
+    open-floating false
 }
 
 // Example: block out two password managers from screen capture.
@@ -637,7 +638,7 @@ binds {
     // Mod+Space       { switch-layout "next"; }
     // Mod+Shift+Space { switch-layout "prev"; }
 
-    Mod+Shift+S hotkey-overlay-title="Screenshot and Annotate: flameshot" { spawn "flameshot" "gui"; }
+    Mod+Shift+S hotkey-overlay-title="Screenshot and Annotate: swappy" { spawn-sh "grim -g \"$(slurp)\" - | swappy -f -"; }
     Print { screenshot; }
     Ctrl+Print { screenshot-screen; }
     Alt+Print { screenshot-window; }

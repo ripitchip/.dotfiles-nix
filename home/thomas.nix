@@ -30,6 +30,7 @@
     nocturne.enable = config.my.desktop.enable;
     opencloud-desktop.enable = config.my.desktop.enable;
     sable.enable = config.my.desktop.enable;
+    sdrpp.enable = osConfig.my.sdr.enable;
     termsonic.enable = osConfig.my.audio.enable;
     vscode.enable = config.my.desktop.enable;
     zen-browser.enable = config.my.desktop.enable;

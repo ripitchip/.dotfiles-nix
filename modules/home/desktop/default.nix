@@ -20,6 +20,13 @@
       settings.enable_audio_bell = false;
     };
 
+    # XDG Terminal Exec spec (implemented natively by GLib/GIO): apps that
+    # need to run something in a terminal (e.g. Nautilus-style "Open
+    # Terminal", GNOME Text Editor) look this up instead of a hardcoded
+    # list, which otherwise fails with "could not find a fallback terminal
+    # emulator application" since no gnome-terminal/xterm is installed here.
+    xdg.configFile."xdg-terminals.list".text = "kitty.desktop\n";
+
     # Bound to Super+Alt+L in niri.kdl
     programs.swaylock.enable = true;
 
