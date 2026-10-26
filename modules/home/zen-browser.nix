@@ -13,7 +13,10 @@
   options.my.zen-browser.enable = lib.mkEnableOption "Zen, a Firefox-based browser";
 
   config = lib.mkIf config.my.zen-browser.enable {
-    programs.zen-browser.enable = true;
+    programs.zen-browser = {
+      enable = true;
+      setAsDefaultBrowser = true;
+    };
 
     home.persistence.${osConfig.my.impermanence.persistPath}.directories = [
       ".config/zen" # profile: settings, bookmarks, extensions, sessions
