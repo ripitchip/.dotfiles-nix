@@ -31,6 +31,17 @@
         package = pkgs.papirus-icon-theme;
         name = "Papirus-Dark";
       };
+
+      # Thunar's sidebar only auto-adds Home, Desktop and Trash: everything
+      # else (Documents, Downloads, ...) is a user bookmark, read from this
+      # same GTK3 file. Desktop is already covered by Thunar's default.
+      gtk3.bookmarks = with config.xdg.userDirs; [
+        "file://${documents}"
+        "file://${download}"
+        "file://${music}"
+        "file://${pictures}"
+        "file://${videos}"
+      ];
     };
   };
 }
