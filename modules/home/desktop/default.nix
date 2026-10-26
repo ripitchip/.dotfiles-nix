@@ -27,6 +27,30 @@
     # emulator application" since no gnome-terminal/xterm is installed here.
     xdg.configFile."xdg-terminals.list".text = "kitty.desktop\n";
 
+    # Thunar's "Open Terminal Here" custom action runs
+    # `exo-open --launch TerminalEmulator` (exo's own helper mechanism, not
+    # the XDG Terminal Exec spec above). exo picks the TerminalEmulator
+    # helper from ~/.config/xfce4/helpers.rc among .desktop files under
+    # xfce4/helpers/; xfce4-settings normally ships helpers for the usual
+    # terminals, but it isn't installed here, so exo has nothing to fall
+    # back to ("Could not find fallback TerminalEmulator application")
+    # until kitty is registered as one.
+    xdg.dataFile."xfce4/helpers/kitty.desktop".text = ''
+      [Desktop Entry]
+      Version=1.0
+      Encoding=UTF-8
+      Type=X-XFCE-Helper
+      X-XFCE-Category=TerminalEmulator
+      Name=Kitty
+      Comment=Fast, feature-rich terminal emulator
+      Icon=kitty
+      Commands=kitty;
+      X-XFCE-CommandsWithParameter=kitty --working-directory %s;
+      TryExec=kitty
+      NoDisplay=true
+    '';
+    xdg.configFile."xfce4/helpers.rc".text = "TerminalEmulator=kitty\n";
+
     # Bound to Super+Alt+L in niri.kdl
     programs.swaylock.enable = true;
 
