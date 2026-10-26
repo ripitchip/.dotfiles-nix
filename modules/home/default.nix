@@ -16,6 +16,7 @@
     ./jellyfin.nix
     ./kubernetes.nix
     ./neovim.nix
+    ./nemo.nix
     ./nocturne.nix
     ./opencloud-desktop.nix
     ./proton-vpn.nix
