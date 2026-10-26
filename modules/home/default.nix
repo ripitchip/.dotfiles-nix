@@ -8,7 +8,6 @@
     ./claude-desktop.nix
     ./desktop
     ./firefox.nix
-    ./flameshot.nix
     ./flutter.nix
     ./git
     ./helium.nix
@@ -20,6 +19,7 @@
     ./opencloud-desktop.nix
     ./protonmail.nix
     ./sable.nix
+    ./screenshot.nix
     ./sdrpp.nix
     ./shell.nix
     ./signal.nix

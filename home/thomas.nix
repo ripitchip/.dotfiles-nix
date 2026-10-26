@@ -21,7 +21,7 @@
     # Follow the system: no niri session nor GUI apps on a machine without niri
     desktop.enable = osConfig.my.desktop.enable;
     firefox.enable = config.my.desktop.enable;
-    flameshot.enable = config.my.desktop.enable;
+    screenshot.enable = config.my.desktop.enable;
     bitwarden.enable = config.my.desktop.enable;
     claude-desktop.enable = config.my.desktop.enable;
     protonmail.enable = config.my.desktop.enable;
