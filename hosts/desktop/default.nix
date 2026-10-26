@@ -12,6 +12,7 @@
     audio.enable = true;
     bluetooth.enable = true;
     desktop.enable = true;
+    docker.enable = true;
     impermanence.enable = true;
     nvidia.enable = true;
     sdr.enable = true;

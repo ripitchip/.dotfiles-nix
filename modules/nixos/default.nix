@@ -9,6 +9,7 @@
     ./audio.nix
     ./bluetooth.nix
     ./desktop.nix
+    ./docker.nix
     ./impermanence.nix
     ./laptop.nix
     ./nvidia.nix
