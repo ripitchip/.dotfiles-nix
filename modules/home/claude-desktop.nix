@@ -13,12 +13,20 @@ let
 
   # Same as Signal (see signal.nix): Electron doesn't know niri and would keep
   # its encryption key in plain text; use the Secret Service (oo7) instead.
+  #
+  # --disable-gpu-sandbox: on this NVIDIA system the GPU process fails to
+  # even launch under its sandbox (~/.config/Claude/logs/main.log: "GPU
+  # process gone, reason: launch-failed, exitCode: 1002", crash-looping).
+  # The sidebar (plain DOM/CSS) still renders, but the chat pane needs
+  # GPU compositing and stays solid black. Not a packaging/runpath issue
+  # (libglvnd + /run/opengl-driver are correctly wired); lifting just the
+  # GPU process's sandbox lets it start while keeping hardware acceleration.
   claude-desktop = pkgs.symlinkJoin {
     name = "claude-desktop";
     paths = [ package ];
     nativeBuildInputs = [ pkgs.makeWrapper ];
     postBuild = ''
-      wrapProgram $out/bin/claude-desktop --add-flags --password-store=gnome-libsecret
+      wrapProgram $out/bin/claude-desktop --add-flags "--password-store=gnome-libsecret --disable-gpu-sandbox"
     '';
   };
 in
