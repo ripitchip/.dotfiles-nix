@@ -71,6 +71,7 @@
   home.packages = with pkgs; [
     claude-code
     fastfetch
+    openssl
     p7zip # 7z
     ripgrep
     tree
