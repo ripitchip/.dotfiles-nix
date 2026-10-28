@@ -13,6 +13,7 @@
     ./impermanence.nix
     ./laptop.nix
     ./nvidia.nix
+    ./printing.nix
     ./sdr.nix
     ./secrets.nix
     ./steam.nix

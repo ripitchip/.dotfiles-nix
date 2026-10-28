@@ -15,6 +15,7 @@
     desktop.enable = true;
     impermanence.enable = true;
     laptop.enable = true;
+    printing.enable = true;
     sdr.enable = true;
     steam.enable = true;
   };

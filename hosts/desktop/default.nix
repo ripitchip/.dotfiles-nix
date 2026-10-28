@@ -15,6 +15,7 @@
     docker.enable = true;
     impermanence.enable = true;
     nvidia.enable = true;
+    printing.enable = true;
     sdr.enable = true;
     steam.enable = true;
   };
