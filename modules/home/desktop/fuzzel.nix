@@ -39,6 +39,13 @@ in
         main = {
           # Terminal apps (Terminal=true in their .desktop) open in kitty
           terminal = "kitty";
+          # Without this, fuzzel's icon-theme defaults to "default", which
+          # resolves to ~/.icons/default (the cursor theme symlink from
+          # modules/home/desktop/theme.nix), not Papirus-Dark. Lookups then
+          # only hit the universal hicolor fallback, so apps whose .desktop
+          # Icon= references a themed name instead of their own bundled
+          # icon (e.g. Nemo's Icon=system-file-manager) show no icon at all.
+          icon-theme = config.gtk.iconTheme.name;
           font = "Iosevka:size=14";
           # With every output at scale 1, "auto" sizes fonts from the panel's
           # real DPI (~168 on eDP-1) and the whole launcher looks zoomed in.
