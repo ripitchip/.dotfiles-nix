@@ -1,6 +1,7 @@
 {
   config,
   lib,
+  osConfig,
   pkgs,
   ...
 }:
@@ -14,6 +15,15 @@
     home.packages = [
       pkgs.waypaper
       pkgs.awww
+    ];
+
+    # Without this, the root filesystem is ephemeral (see
+    # modules/nixos/impermanence.nix), so both waypaper's saved choice and
+    # awww-daemon's own cache (which it auto-restores from on startup) get
+    # wiped on every reboot and the wallpaper never comes back.
+    home.persistence.${osConfig.my.impermanence.persistPath}.directories = [
+      ".config/waypaper"
+      ".cache/awww"
     ];
 
     # waypaper's "awww" backend (awww is swww's successor) needs its daemon
