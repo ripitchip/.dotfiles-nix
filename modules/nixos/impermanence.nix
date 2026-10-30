@@ -38,6 +38,15 @@ in
     }
   );
 
+  # /tmp as its own tmpfs, with its own budget, instead of living inside /.
+  # Otherwise any directory that fills up the root tmpfs (e.g. a big
+  # extraction under $HOME, since / is wiped on reboot anyway) starves /tmp
+  # too, breaking anything that writes there — Nix's sqlite db included.
+  config.boot.tmp = lib.mkIf cfg.enable {
+    useTmpfs = lib.mkDefault true;
+    tmpfsSize = lib.mkDefault "50%";
+  };
+
   config.environment.persistence.${cfg.persistPath} = {
     inherit (cfg) enable;
     hideMounts = true;
