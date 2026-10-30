@@ -19,6 +19,7 @@
     ./neovim.nix
     ./nemo.nix
     ./nocturne.nix
+    ./obs.nix
     ./opencloud-desktop.nix
     ./proton-vpn.nix
     ./protonmail.nix

@@ -32,6 +32,7 @@
     proton-vpn.enable = config.my.desktop.enable;
     android-messages.enable = config.my.desktop.enable;
     nemo.enable = config.my.desktop.enable;
+    obs.enable = config.my.desktop.enable;
     element.enable = config.my.desktop.enable;
     sdrpp.enable = osConfig.my.sdr.enable;
     termsonic.enable = osConfig.my.audio.enable;
