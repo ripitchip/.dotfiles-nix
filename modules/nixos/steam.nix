@@ -1,4 +1,4 @@
-{ config, lib, ... }:
+{ config, lib, pkgs, ... }:
 {
   options.my.steam.enable = lib.mkEnableOption "Steam";
 
@@ -7,5 +7,9 @@
   # already persisted; ~/.steam only holds symlinks Steam recreates on start.
   config = lib.mkIf config.my.steam.enable {
     programs.steam.enable = true; # also sets hardware.graphics.enable32Bit
+
+    # Install missing deps into a game's Proton prefix, e.g.:
+    #   protontricks <appid> vcrun2022 arial
+    environment.systemPackages = [ pkgs.protontricks ];
   };
 }
